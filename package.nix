@@ -29,6 +29,9 @@ in buildGoModule rec {
     mkdir -p $out/share/bash-completion/completions
     $out/bin/nova completion bash > $out/share/bash-completion/completions/nova
     chmod +x $out/share/bash-completion/completions/nova
+    mkdir -p $out/share/fish/vendor_completions.d
+    $out/bin/nova completion fish > $out/share/fish/vendor_completions.d/nova.fish
+    chmod +x $out/share/fish/vendor_completions.d/nova.fish
   '';
 
   meta = with lib; {
