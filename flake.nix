@@ -10,7 +10,7 @@
   in {
 
     packages.${system} = {
-      nova = pkgs.callPackage ./package.nix {};
+      nova = pkgs.callPackage ./default.nix {};
       default = self.packages.x86_64-linux.nova;
     };
   };
